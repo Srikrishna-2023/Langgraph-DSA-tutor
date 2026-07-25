@@ -16,7 +16,7 @@ def plan(state: SessionState) -> SessionState:
     messages=[
         {"role": "user", "content": f"Classify this into one of: new_problem, review_solution, hint_request. Text: '{text}'. Reply with only the label."}],
     )
-    state["intent"] = response.message.content
+    state["intent"] = response.message.content.strip()
     if state["intent"] == "new_problem":
         for level in ("easy", "medium", "hard"):
             if level in text:
@@ -27,7 +27,7 @@ def plan(state: SessionState) -> SessionState:
         
         known_topics = [
                     "two-pointer", "two pointer", "dutch national flag", "binary search",
-                    "linked list", "binary tree", "stack", "queue", "monotonic stack",
+                    "linked list", "tree", "stack", "queue", "monotonic stack",
                     "dynamic programming", "dp",
                 ]
         state["topic"] = next((t for t in known_topics if t in text), "unspecified")
