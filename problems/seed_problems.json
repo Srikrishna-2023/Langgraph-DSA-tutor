@@ -6,16 +6,88 @@
       "difficulty": "easy",
       "description": "Given an array of integers `nums` and an integer `target`, return the indices of the two numbers that add up to `target`. You may assume each input has exactly one solution.",
       "testcases": [
-        {
-          "target": 9,
-          "array": [2, 7, 11, 15],
-          "expected": [0, 1]
-        },
-        {
-          "target": 6,
-          "array": [3, 2, 4],
-          "expected": [1, 2]
-        }
+        { "target": 9, "array": [2, 7, 11, 15], "expected": [0, 1] },
+        { "target": 6, "array": [3, 2, 4], "expected": [1, 2] }
+      ]
+    },
+    {
+      "id": "two-sum-sorted-001",
+      "topic": "two-pointer",
+      "difficulty": "easy",
+      "description": "Given a 1-indexed array of integers `numbers` sorted in non-decreasing order, find two numbers that add up to `target`. Return their indices as a 1-indexed array `[index1, index2]`.",
+      "testcases": [
+        { "target": 9, "array": [1, 2, 4, 6, 10], "expected": [2, 3] },
+        { "target": 12, "array": [2, 3, 4], "expected": [1, 3] }
+      ]
+    },
+    {
+      "id": "container-with-most-water-001",
+      "topic": "two-pointer",
+      "difficulty": "medium",
+      "description": "Given `n` non-negative integers representing an elevation map where the width of each bar is 1, find two lines that together with the x-axis form a container that holds the most water.",
+      "testcases": [
+        { "array": [1, 8, 6, 2, 5, 4, 8, 3, 7], "expected": 49 },
+        { "array": [1, 1], "expected": 1 }
+      ]
+    },
+    {
+      "id": "remove-duplicates-sorted-array-001",
+      "topic": "two-pointer",
+      "difficulty": "easy",
+      "description": "Given a sorted array `nums`, remove the duplicates in-place such that each unique element appears only once. Return the number of unique elements.",
+      "testcases": [
+        { "array": [1, 1, 2], "expected": 2 },
+        { "array": [0, 0, 1, 1, 1, 2, 2, 3, 3, 4], "expected": 5 }
+      ]
+    },
+    {
+      "id": "three-sum-001",
+      "topic": "two-pointer",
+      "difficulty": "medium",
+      "description": "Given an integer array `nums`, return all unique triplets `[nums[i], nums[j], nums[k]]` such that i != j != k and nums[i] + nums[j] + nums[k] == 0.",
+      "testcases": [
+        { "array": [-1, 0, 1, 2, -1, -4], "expected": [[-1, -1, 2], [-1, 0, 1]] },
+        { "array": [0, 1, 1], "expected": [] }
+      ]
+    },
+    {
+      "id": "valid-palindrome-001",
+      "topic": "two pointer",
+      "difficulty": "easy",
+      "description": "Given a string `s`, considering only alphanumeric characters and ignoring case, determine if it is a palindrome.",
+      "testcases": [
+        { "string": "A man, a plan, a canal: Panama", "expected": true },
+        { "string": "race a car", "expected": false }
+      ]
+    },
+    {
+      "id": "reverse-string-001",
+      "topic": "two pointer",
+      "difficulty": "easy",
+      "description": "Write a function that reverses a string in-place, given as an array of characters.",
+      "testcases": [
+        { "array": ["h", "e", "l", "l", "o"], "expected": ["o", "l", "l", "e", "h"] },
+        { "array": ["H", "a", "n", "n", "a", "h"], "expected": ["h", "a", "n", "n", "a", "H"] }
+      ]
+    },
+    {
+      "id": "move-zeroes-001",
+      "topic": "two pointer",
+      "difficulty": "easy",
+      "description": "Given an integer array `nums`, move all 0s to the end while maintaining the relative order of the non-zero elements, in-place.",
+      "testcases": [
+        { "array": [0, 1, 0, 3, 12], "expected": [1, 3, 12, 0, 0] },
+        { "array": [0], "expected": [0] }
+      ]
+    },
+    {
+      "id": "squares-of-sorted-array-001",
+      "topic": "two pointer",
+      "difficulty": "easy",
+      "description": "Given an integer array `nums` sorted in non-decreasing order, return an array of the squares of each number, also sorted in non-decreasing order.",
+      "testcases": [
+        { "array": [-4, -1, 0, 3, 10], "expected": [0, 1, 9, 16, 100] },
+        { "array": [-7, -3, 2, 3, 11], "expected": [4, 9, 9, 49, 121] }
       ]
     },
     {
@@ -24,14 +96,88 @@
       "difficulty": "medium",
       "description": "Given an array containing only 0s, 1s, and 2s, sort the array in-place so all 0s come first, then all 1s, then all 2s.",
       "testcases": [
-        {
-          "array": [2, 0, 2, 1, 1, 0],
-          "expected": [0, 0, 1, 1, 2, 2]
-        },
-        {
-          "array": [2, 0, 1],
-          "expected": [0, 1, 2]
-        }
+        { "array": [2, 0, 2, 1, 1, 0], "expected": [0, 0, 1, 1, 2, 2] },
+        { "array": [2, 0, 1], "expected": [0, 1, 2] }
+      ]
+    },
+    {
+      "id": "partition-array-around-pivot-001",
+      "topic": "dutch national flag",
+      "difficulty": "medium",
+      "description": "Given an array of integers and a pivot value, reorder the array in-place so all elements less than the pivot come first, then elements equal to the pivot, then elements greater than the pivot.",
+      "testcases": [
+        { "array": [9, 12, 5, 10, 14, 3, 10], "pivot": 10, "expected": [9, 5, 3, 10, 10, 12, 14] },
+        { "array": [1, 4, 1, 1, 2], "pivot": 1, "expected": [1, 1, 1, 4, 2] }
+      ]
+    },
+    {
+      "id": "sort-array-by-parity-001",
+      "topic": "dutch national flag",
+      "difficulty": "easy",
+      "description": "Given an integer array `nums`, move all even integers to the beginning followed by all odd integers, in-place.",
+      "testcases": [
+        { "array": [3, 1, 2, 4], "expected": [2, 4, 3, 1] },
+        { "array": [0], "expected": [0] }
+      ]
+    },
+    {
+      "id": "binary-search-001",
+      "topic": "binary search",
+      "difficulty": "easy",
+      "description": "Given a sorted array of distinct integers `nums` and a `target`, return the index of `target` if found, otherwise return -1.",
+      "testcases": [
+        { "array": [-1, 0, 3, 5, 9, 12], "target": 9, "expected": 4 },
+        { "array": [-1, 0, 3, 5, 9, 12], "target": 2, "expected": -1 }
+      ]
+    },
+    {
+      "id": "search-in-rotated-sorted-array-001",
+      "topic": "binary search",
+      "difficulty": "medium",
+      "description": "Given a rotated sorted array `nums` (originally sorted in ascending order, possibly rotated at an unknown pivot) and a `target`, return the index of `target` if found, else -1.",
+      "testcases": [
+        { "array": [4, 5, 6, 7, 0, 1, 2], "target": 0, "expected": 4 },
+        { "array": [4, 5, 6, 7, 0, 1, 2], "target": 3, "expected": -1 }
+      ]
+    },
+    {
+      "id": "find-first-and-last-position-001",
+      "topic": "binary search",
+      "difficulty": "medium",
+      "description": "Given a sorted array of integers `nums` and a `target`, find the starting and ending position of `target`. Return `[-1, -1]` if not found.",
+      "testcases": [
+        { "array": [5, 7, 7, 8, 8, 10], "target": 8, "expected": [3, 4] },
+        { "array": [5, 7, 7, 8, 8, 10], "target": 6, "expected": [-1, -1] }
+      ]
+    },
+    {
+      "id": "sqrt-binary-search-001",
+      "topic": "binary search",
+      "difficulty": "easy",
+      "description": "Given a non-negative integer `x`, compute and return the integer square root of `x` using binary search.",
+      "testcases": [
+        { "x": 4, "expected": 2 },
+        { "x": 8, "expected": 2 }
+      ]
+    },
+    {
+      "id": "find-peak-element-001",
+      "topic": "binary search",
+      "difficulty": "medium",
+      "description": "Given an integer array `nums`, find a peak element (an element strictly greater than its neighbors) and return its index. Assume `nums[-1] = nums[n] = -infinity`.",
+      "testcases": [
+        { "array": [1, 2, 3, 1], "expected": 2 },
+        { "array": [1, 2, 1, 3, 5, 6, 4], "expected": 5 }
+      ]
+    },
+    {
+      "id": "koko-eating-bananas-001",
+      "topic": "binary search",
+      "difficulty": "medium",
+      "description": "Given piles of bananas and `h` hours, find the minimum eating speed `k` (bananas per hour) such that Koko can eat all bananas within `h` hours.",
+      "testcases": [
+        { "piles": [3, 6, 7, 11], "h": 8, "expected": 4 },
+        { "piles": [30, 11, 23, 4, 20], "h": 5, "expected": 30 }
       ]
     },
     {
@@ -40,14 +186,8 @@
       "difficulty": "easy",
       "description": "Given the head of a singly linked list, reverse the list and return the reversed list.",
       "testcases": [
-        {
-          "list": [1, 2, 3, 4, 5],
-          "expected": [5, 4, 3, 2, 1]
-        },
-        {
-          "list": [1, 2],
-          "expected": [2, 1]
-        }
+        { "list": [1, 2, 3, 4, 5], "expected": [5, 4, 3, 2, 1] },
+        { "list": [1, 2], "expected": [2, 1] }
       ]
     },
     {
@@ -56,16 +196,8 @@
       "difficulty": "easy",
       "description": "Given the heads of two sorted linked lists, merge them into one sorted linked list and return its head.",
       "testcases": [
-        {
-          "list1": [1, 2, 4],
-          "list2": [1, 3, 4],
-          "expected": [1, 1, 2, 3, 4, 4]
-        },
-        {
-          "list1": [],
-          "list2": [0],
-          "expected": [0]
-        }
+        { "list1": [1, 2, 4], "list2": [1, 3, 4], "expected": [1, 1, 2, 3, 4, 4] },
+        { "list1": [], "list2": [0], "expected": [0] }
       ]
     },
     {
@@ -74,32 +206,18 @@
       "difficulty": "medium",
       "description": "Given the head of a linked list and an integer `n`, remove the nth node from the end of the list and return its head.",
       "testcases": [
-        {
-          "list": [1, 2, 3, 4, 5],
-          "n": 2,
-          "expected": [1, 2, 3, 5]
-        },
-        {
-          "list": [1],
-          "n": 1,
-          "expected": []
-        }
+        { "list": [1, 2, 3, 4, 5], "n": 2, "expected": [1, 2, 3, 5] },
+        { "list": [1], "n": 1, "expected": [] }
       ]
     },
     {
       "id": "middle-of-linked-list-001",
       "topic": "linked list",
       "difficulty": "easy",
-      "description": "Given the head of a singly linked list, return the middle node of the linked list. If there are two middle nodes, return the second one.",
+      "description": "Given the head of a singly linked list, return the middle node. If there are two middle nodes, return the second one.",
       "testcases": [
-        {
-          "list": [1, 2, 3, 4, 5],
-          "expected": [3, 4, 5]
-        },
-        {
-          "list": [1, 2, 3, 4, 5, 6],
-          "expected": [4, 5, 6]
-        }
+        { "list": [1, 2, 3, 4, 5], "expected": [3, 4, 5] },
+        { "list": [1, 2, 3, 4, 5, 6], "expected": [4, 5, 6] }
       ]
     },
     {
@@ -108,30 +226,28 @@
       "difficulty": "medium",
       "description": "Given the head of a singly linked list, determine whether the list is a palindrome.",
       "testcases": [
-        {
-          "list": [1, 2, 2, 1],
-          "expected": true
-        },
-        {
-          "list": [1, 2],
-          "expected": false
-        }
+        { "list": [1, 2, 2, 1], "expected": true },
+        { "list": [1, 2], "expected": false }
+      ]
+    },
+    {
+      "id": "linked-list-cycle-001",
+      "topic": "linked list",
+      "difficulty": "easy",
+      "description": "Given the head of a linked list, determine if the linked list has a cycle in it, using O(1) extra space.",
+      "testcases": [
+        { "list": [3, 2, 0, -4], "pos": 1, "expected": true },
+        { "list": [1], "pos": -1, "expected": false }
       ]
     },
     {
       "id": "max-depth-binary-tree-001",
       "topic": "tree",
       "difficulty": "easy",
-      "description": "Given the root of a binary tree, return its maximum depth (the number of nodes along the longest path from the root down to the farthest leaf).",
+      "description": "Given the root of a binary tree, return its maximum depth (number of nodes along the longest path from root to the farthest leaf).",
       "testcases": [
-        {
-          "tree": [3, 9, 20, null, null, 15, 7],
-          "expected": 3
-        },
-        {
-          "tree": [1, null, 2],
-          "expected": 2
-        }
+        { "tree": [3, 9, 20, null, null, 15, 7], "expected": 3 },
+        { "tree": [1, null, 2], "expected": 2 }
       ]
     },
     {
@@ -140,30 +256,18 @@
       "difficulty": "easy",
       "description": "Given the root of a binary tree, invert the tree (swap every left and right child) and return its root.",
       "testcases": [
-        {
-          "tree": [4, 2, 7, 1, 3, 6, 9],
-          "expected": [4, 7, 2, 9, 6, 3, 1]
-        },
-        {
-          "tree": [2, 1, 3],
-          "expected": [2, 3, 1]
-        }
+        { "tree": [4, 2, 7, 1, 3, 6, 9], "expected": [4, 7, 2, 9, 6, 3, 1] },
+        { "tree": [2, 1, 3], "expected": [2, 3, 1] }
       ]
     },
     {
       "id": "level-order-traversal-001",
       "topic": "tree",
       "difficulty": "medium",
-      "description": "Given the root of a binary tree, return the level order traversal of its nodes' values (i.e., from left to right, level by level).",
+      "description": "Given the root of a binary tree, return the level order traversal of its nodes' values (left to right, level by level).",
       "testcases": [
-        {
-          "tree": [3, 9, 20, null, null, 15, 7],
-          "expected": [[3], [9, 20], [15, 7]]
-        },
-        {
-          "tree": [1],
-          "expected": [[1]]
-        }
+        { "tree": [3, 9, 20, null, null, 15, 7], "expected": [[3], [9, 20], [15, 7]] },
+        { "tree": [1], "expected": [[1]] }
       ]
     },
     {
@@ -172,34 +276,228 @@
       "difficulty": "medium",
       "description": "Given the root of a binary tree, determine if it is a valid binary search tree (BST).",
       "testcases": [
-        {
-          "tree": [2, 1, 3],
-          "expected": true
-        },
-        {
-          "tree": [5, 1, 4, null, null, 3, 6],
-          "expected": false
-        }
+        { "tree": [2, 1, 3], "expected": true },
+        { "tree": [5, 1, 4, null, null, 3, 6], "expected": false }
       ]
     },
     {
       "id": "lowest-common-ancestor-bst-001",
       "topic": "tree",
       "difficulty": "medium",
-      "description": "Given a binary search tree (BST) and two nodes `p` and `q`, find the lowest common ancestor (LCA) of the two nodes in the BST.",
+      "description": "Given a binary search tree (BST) and two nodes `p` and `q`, find the lowest common ancestor (LCA) of the two nodes.",
       "testcases": [
-        {
-          "tree": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5],
-          "p": 2,
-          "q": 8,
-          "expected": 6
-        },
-        {
-          "tree": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5],
-          "p": 2,
-          "q": 4,
-          "expected": 2
-        }
+        { "tree": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], "p": 2, "q": 8, "expected": 6 },
+        { "tree": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], "p": 2, "q": 4, "expected": 2 }
+      ]
+    },
+    {
+      "id": "diameter-of-binary-tree-001",
+      "topic": "tree",
+      "difficulty": "easy",
+      "description": "Given the root of a binary tree, return the length of the diameter of the tree (the longest path between any two nodes, measured in number of edges).",
+      "testcases": [
+        { "tree": [1, 2, 3, 4, 5], "expected": 3 },
+        { "tree": [1, 2], "expected": 1 }
+      ]
+    },
+    {
+      "id": "valid-parentheses-001",
+      "topic": "stack",
+      "difficulty": "easy",
+      "description": "Given a string `s` containing just the characters `(){}[]`, determine if the input string is valid (every open bracket is closed by the same type in the correct order).",
+      "testcases": [
+        { "string": "()[]{}", "expected": true },
+        { "string": "(]", "expected": false }
+      ]
+    },
+    {
+      "id": "min-stack-001",
+      "topic": "stack",
+      "difficulty": "medium",
+      "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+      "testcases": [
+        { "operations": ["push(-2)", "push(0)", "push(-3)", "getMin()", "pop()", "top()", "getMin()"], "expected": [-3, 0, -2] },
+        { "operations": ["push(1)", "push(2)", "getMin()"], "expected": [1] }
+      ]
+    },
+    {
+      "id": "evaluate-reverse-polish-notation-001",
+      "topic": "stack",
+      "difficulty": "medium",
+      "description": "Evaluate the value of an arithmetic expression given as an array of tokens in Reverse Polish Notation.",
+      "testcases": [
+        { "tokens": ["2", "1", "+", "3", "*"], "expected": 9 },
+        { "tokens": ["4", "13", "5", "/", "+"], "expected": 6 }
+      ]
+    },
+    {
+      "id": "implement-queue-using-stacks-001",
+      "topic": "stack",
+      "difficulty": "easy",
+      "description": "Implement a first-in-first-out (FIFO) queue using only two stacks, supporting push, pop, peek, and empty operations.",
+      "testcases": [
+        { "operations": ["push(1)", "push(2)", "peek()", "pop()", "empty()"], "expected": [1, 1, false] },
+        { "operations": ["push(1)", "empty()"], "expected": [false] }
+      ]
+    },
+    {
+      "id": "decode-string-001",
+      "topic": "stack",
+      "difficulty": "medium",
+      "description": "Given an encoded string in the form `k[encoded_string]`, return its decoded string, where `k` indicates the encoded_string inside should be repeated `k` times.",
+      "testcases": [
+        { "string": "3[a]2[bc]", "expected": "aaabcbc" },
+        { "string": "3[a2[c]]", "expected": "accaccacc" }
+      ]
+    },
+    {
+      "id": "implement-stack-using-queues-001",
+      "topic": "queue",
+      "difficulty": "easy",
+      "description": "Implement a last-in-first-out (LIFO) stack using only two queues, supporting push, pop, top, and empty operations.",
+      "testcases": [
+        { "operations": ["push(1)", "push(2)", "top()", "pop()", "empty()"], "expected": [2, 2, false] },
+        { "operations": ["push(1)", "empty()"], "expected": [false] }
+      ]
+    },
+    {
+      "id": "moving-average-from-data-stream-001",
+      "topic": "queue",
+      "difficulty": "easy",
+      "description": "Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window using a queue.",
+      "testcases": [
+        { "size": 3, "stream": [1, 10, 3, 5], "expected": [1.0, 5.5, 4.67, 6.0] },
+        { "size": 2, "stream": [4, 6], "expected": [4.0, 5.0] }
+      ]
+    },
+    {
+      "id": "circular-queue-design-001",
+      "topic": "queue",
+      "difficulty": "medium",
+      "description": "Design a circular queue with a fixed size `k`, supporting enqueue, dequeue, front, rear, isEmpty, and isFull operations.",
+      "testcases": [
+        { "k": 3, "operations": ["enqueue(1)", "enqueue(2)", "enqueue(3)", "enqueue(4)", "rear()", "isFull()"], "expected": [true, false, 3, true] },
+        { "k": 2, "operations": ["enqueue(1)", "dequeue()", "isEmpty()"], "expected": [true, true, true] }
+      ]
+    },
+    {
+      "id": "generate-binary-numbers-using-queue-001",
+      "topic": "queue",
+      "difficulty": "easy",
+      "description": "Given an integer `n`, generate binary representations of numbers from 1 to `n` using a queue.",
+      "testcases": [
+        { "n": 4, "expected": ["1", "10", "11", "100"] },
+        { "n": 2, "expected": ["1", "10"] }
+      ]
+    },
+    {
+      "id": "daily-temperatures-001",
+      "topic": "monotonic stack",
+      "difficulty": "medium",
+      "description": "Given an array of daily temperatures, return an array where `answer[i]` is the number of days until a warmer temperature; 0 if there is none.",
+      "testcases": [
+        { "array": [73, 74, 75, 71, 69, 72, 76, 73], "expected": [1, 1, 4, 2, 1, 1, 0, 0] },
+        { "array": [30, 40, 50, 60], "expected": [1, 1, 1, 0] }
+      ]
+    },
+    {
+      "id": "next-greater-element-001",
+      "topic": "monotonic stack",
+      "difficulty": "easy",
+      "description": "Given two arrays `nums1` and `nums2` where `nums1` is a subset of `nums2`, for each element in `nums1` find the next greater element in `nums2`, or -1 if none exists.",
+      "testcases": [
+        { "nums1": [4, 1, 2], "nums2": [1, 3, 4, 2], "expected": [-1, 3, -1] },
+        { "nums1": [2, 4], "nums2": [1, 2, 3, 4], "expected": [3, -1] }
+      ]
+    },
+    {
+      "id": "largest-rectangle-in-histogram-001",
+      "topic": "monotonic stack",
+      "difficulty": "hard",
+      "description": "Given an array of integers representing histogram bar heights, find the area of the largest rectangle that can be formed within the histogram.",
+      "testcases": [
+        { "array": [2, 1, 5, 6, 2, 3], "expected": 10 },
+        { "array": [2, 4], "expected": 4 }
+      ]
+    },
+    {
+      "id": "remove-k-digits-001",
+      "topic": "monotonic stack",
+      "difficulty": "medium",
+      "description": "Given a non-negative integer as a string `num` and an integer `k`, remove `k` digits so that the remaining number is the smallest possible.",
+      "testcases": [
+        { "num": "1432219", "k": 3, "expected": "1219" },
+        { "num": "10200", "k": 1, "expected": "200" }
+      ]
+    },
+    {
+      "id": "climbing-stairs-001",
+      "topic": "dynamic programming",
+      "difficulty": "easy",
+      "description": "You are climbing a staircase with `n` steps. Each time you can climb 1 or 2 steps. Return the number of distinct ways to reach the top.",
+      "testcases": [
+        { "n": 2, "expected": 2 },
+        { "n": 3, "expected": 3 }
+      ]
+    },
+    {
+      "id": "house-robber-001",
+      "topic": "dynamic programming",
+      "difficulty": "medium",
+      "description": "Given an array representing money in houses arranged in a line, return the maximum amount you can rob without robbing two adjacent houses.",
+      "testcases": [
+        { "array": [1, 2, 3, 1], "expected": 4 },
+        { "array": [2, 7, 9, 3, 1], "expected": 12 }
+      ]
+    },
+    {
+      "id": "longest-common-subsequence-001",
+      "topic": "dynamic programming",
+      "difficulty": "medium",
+      "description": "Given two strings `text1` and `text2`, return the length of their longest common subsequence, or 0 if none exists.",
+      "testcases": [
+        { "text1": "abcde", "text2": "ace", "expected": 3 },
+        { "text1": "abc", "text2": "def", "expected": 0 }
+      ]
+    },
+    {
+      "id": "coin-change-001",
+      "topic": "dynamic programming",
+      "difficulty": "medium",
+      "description": "Given an array of coin denominations and an amount, return the fewest number of coins needed to make up that amount, or -1 if it cannot be made.",
+      "testcases": [
+        { "coins": [1, 2, 5], "amount": 11, "expected": 3 },
+        { "coins": [2], "amount": 3, "expected": -1 }
+      ]
+    },
+    {
+      "id": "fibonacci-memoization-001",
+      "topic": "dp",
+      "difficulty": "easy",
+      "description": "Given `n`, calculate the nth Fibonacci number using dynamic programming (memoization or tabulation).",
+      "testcases": [
+        { "n": 2, "expected": 1 },
+        { "n": 4, "expected": 3 }
+      ]
+    },
+    {
+      "id": "edit-distance-001",
+      "topic": "dp",
+      "difficulty": "hard",
+      "description": "Given two strings `word1` and `word2`, return the minimum number of operations (insert, delete, replace) required to convert `word1` into `word2`.",
+      "testcases": [
+        { "word1": "horse", "word2": "ros", "expected": 3 },
+        { "word1": "intention", "word2": "execution", "expected": 5 }
+      ]
+    },
+    {
+      "id": "longest-increasing-subsequence-001",
+      "topic": "dp",
+      "difficulty": "medium",
+      "description": "Given an integer array `nums`, return the length of the longest strictly increasing subsequence.",
+      "testcases": [
+        { "array": [10, 9, 2, 5, 3, 7, 101, 18], "expected": 4 },
+        { "array": [0, 1, 0, 3, 2, 3], "expected": 4 }
       ]
     }
   ]
