@@ -16,7 +16,8 @@ from langgraph.graph import StateGraph, END
 
 from state import SessionState
 from agents.planner import plan
-from agents.stubs import problem_generator, code_executor, critic, memory_updater
+from agents.problem_generator import problem_generator
+from agents.stubs import code_executor, critic, memory_updater
 
 
 def route_from_planner(state: SessionState) -> str:
