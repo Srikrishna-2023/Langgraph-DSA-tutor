@@ -5,3 +5,4 @@ def two_sum(nums, target):
                 return [i, j]
 
 print(two_sum([2, 7, 11, 15], 9))
+
