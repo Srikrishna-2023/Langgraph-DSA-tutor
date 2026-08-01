@@ -1,0 +1,12 @@
+
+function_name = "two_sum"
+array = [2, 7, 11, 15]
+target = 9
+expected = [0, 1]
+
+runner_code = f"""
+result = {function_name}({array}, {target})
+print(result == {expected})
+"""
+
+print(runner_code)
