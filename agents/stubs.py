@@ -9,16 +9,7 @@ Each of these gets replaced with a real implementation in later weeks.
 from state import SessionState
 
 
-def problem_generator(state: SessionState) -> SessionState:
-    print(f"[Problem-Generator] would fetch a {state.get('difficulty')} "
-          f"{state.get('topic')} problem here")
-    state["current_problem"] = {
-        "id": "stub-001",
-        "statement": "(stub) Two Sum — return indices of two numbers that add to target",
-        "test_cases": [{"input": [2, 7, 11, 15], "target": 9, "expected": [0, 1]}],
-    }
-    state.setdefault("session_log", []).append({"node": "problem_generator"})
-    return state
+
 
 
 def code_executor(state: SessionState) -> SessionState:

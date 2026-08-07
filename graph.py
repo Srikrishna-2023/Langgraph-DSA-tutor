@@ -1,23 +1,16 @@
 """
 Wires up the StateGraph: nodes + conditional routing edges.
-
-Routing logic (from spec):
-  Planner -> Problem-Generator   if intent == "new_problem"
-  Planner -> Code-Execution      if intent == "review_solution"
-  Planner -> Critic              if intent == "hint_request"
-
-  Code-Execution -> Critic            if a test failed
-  Code-Execution -> Memory-Updater    if all tests passed
-
-  Critic -> Memory-Updater
-  Problem-Generator -> END (waits for the user's attempt)
+All 5 nodes are now real (no more stubs.py).
 """
+
 from langgraph.graph import StateGraph, END
 
 from state import SessionState
 from agents.planner import plan
 from agents.problem_generator import problem_generator
-from agents.stubs import code_executor, critic, memory_updater
+from agents.executor import code_executor
+from agents.stubs import critic
+from agents.stubs import memory_updater
 
 
 def route_from_planner(state: SessionState) -> str:
@@ -29,7 +22,10 @@ def route_from_planner(state: SessionState) -> str:
 
 
 def route_from_execution(state: SessionState) -> str:
-    return "critic" if not state["execution_result"]["passed"] else "memory_updater"
+    result = state.get("execution_result")
+    if result and result.get("passed"):
+        return "memory_updater"
+    return "critic"
 
 
 def build_graph():

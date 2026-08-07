@@ -15,7 +15,7 @@ app = build_graph()
 print("DSA Agent (Week 1 skeleton) — type 'quit' to exit\n")
 
 while True:
-    text = input("> ")
+    text = input(" ")
     if text.strip().lower() == "quit":
         break
 

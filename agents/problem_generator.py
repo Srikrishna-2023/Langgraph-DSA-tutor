@@ -32,8 +32,15 @@ def problem_generator(state: SessionState) -> SessionState:
         state["current_problem"] = {
             "id": selected_problem["id"],
             "statement": selected_problem["description"],
+            "topic": selected_problem["topic"],
             "test_cases": selected_problem["testcases"],
+            "function_name": selected_problem["function_name"],
+            "_note": selected_problem.get("_note"),
         }
+        
+
+        
+        
     session_log_entry = {"node": "problem_generator", "problem_id": selected_problem["id"]}
     state.setdefault("session_log", []).append(session_log_entry)   
-    return state
+    return state    
